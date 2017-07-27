@@ -8,9 +8,11 @@ class HelloWorld extends Component {
     render(){
         return (
             <div>
-                <h1>这是首页</h1>
                 <Header></Header>
-                <a href="/list.html">岗位列表</a>
+                <h1>这是首页</h1>
+                    <ul>
+                        <li><a href="/list.html">岗位列表</a></li>
+                    </ul>
                 <Footer></Footer>
             </div>
         )

@@ -18,9 +18,6 @@ module.exports = {
         inline: true,
         hot: true
     },
-    resolve: {
-        extension: ['', '.js', '.jsx', '.json']
-    },
     module: {
         loaders: [
             {
