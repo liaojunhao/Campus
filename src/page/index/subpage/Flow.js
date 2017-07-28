@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Footer extends Component {
-    render(){
+class Flow extends Component {
+    render() {
         return (
             <div>
-                <h3>我是Footer</h3>
+                这是流程
             </div>
         )
     }
 }
 
-export default Footer
+export default Flow
