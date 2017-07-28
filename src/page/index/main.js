@@ -3,19 +3,19 @@ import ReactDOM, { render } from 'react-dom';
 
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
+import Flow from './subpage/flow/Flow';
+import PostClass from './subpage/PostClass/PostClass';
+import DeliveryBtn from './subpage/delivery/deliveryBtn';
 
-import Flow from './subpage/Flow';
-import PostClass from './subpage/PostClass';
+import './stylee.less'
+import "../../common/iconCss/iconfont.css";
 
 class HelloWorld extends Component {
     render(){
         return (
-            <div>
+            <div className="box">
                 <Header></Header>
-                <h1>这是首页</h1>
-                <ul>
-                    <li><a href="/list.html">投递简历</a></li>
-                </ul>
+                <DeliveryBtn/>
                 <Flow/>
                 <PostClass/>
                 <Footer></Footer>

@@ -24,17 +24,27 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js$/,
+                test: /\.js[x]?$/,
                 loader: ['react-hot-loader', 'babel-loader'],
                 exclude: path.resolve(__dirname, 'node_modules')
             },
             {
-                test : /\.css$/,
-                loader: ExtractTextPlugin.extract('css-loader')
+                test : /\.(less|css)$/,
+                use: ExtractTextPlugin.extract({
+                    use: 'css-loader!less-loader'
+                })
             },
             {
-                test : /\.less$/,
-                loader: ExtractTextPlugin.extract('css-loader', 'less-loader')
+                test: /\.(png|jpe?g|gif|svg)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10240, // 10KB 以下使用 base64
+                    name: 'images/[name]-[hash:6].[ext]'
+                }
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)$/,
+                loader: 'url-loader?limit=10240&name=[name]-[hash:6].[ext]'
             }
 
         ]
