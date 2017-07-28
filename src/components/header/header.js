@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './header.less';
 
 class Header extends Component {
     render(){
         return (
-            <nav>
+            <nav className="nav">
                 {/*logo*/}
                 <h1><img src="" alt=""/></h1>
                 <ul>

@@ -4,7 +4,6 @@ import RouterMap from '../router/routerMap';
 import Footer from '../../../components/footer/footer';
 
 class App extends Component {
-
     render() {
         return (
             <div>
@@ -14,4 +13,5 @@ class App extends Component {
         )
     }
 }
+
 export default App
