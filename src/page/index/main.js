@@ -9,6 +9,7 @@ import DeliveryBtn from './subpage/delivery/deliveryBtn';
 
 import './stylee.less'
 import "../../common/iconCss/iconfont.css";
+import "../../assets/reset.css";
 
 class HelloWorld extends Component {
     render(){

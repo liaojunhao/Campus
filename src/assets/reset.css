@@ -165,9 +165,6 @@ button:-moz-focusring,
     font: inherit;
 }
 /*清除浮动的影响*/
-.clear:after {
-    display: block;
-    height: 0;
-    content: "";
-    clear: both;
-}
+.clearfix:after,.clearfix:before{content: ""; display: table;}
+.clearfix:after{clear: both;}
+.clearfix{*zoom:1;}
