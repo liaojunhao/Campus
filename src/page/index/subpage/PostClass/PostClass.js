@@ -9,7 +9,7 @@ class PostClass extends Component {
                     <li>
                         <i className="icon-icon-test"></i>
                         <div>
-                            <div>技术</div>
+                            <div className="title">技术</div>
                             <span>web前端发开工程师</span>
                             <span>C++开发工程师</span>
                         </div>
@@ -17,7 +17,7 @@ class PostClass extends Component {
                     <li>
                         <i className="icon-xiaoshou"></i>
                         <div>
-                            <div>产品</div>
+                            <div className="title">产品</div>
                             <span>web前端发开工程师</span>
                             <span>C++开发工程师</span>
                         </div>
@@ -25,7 +25,7 @@ class PostClass extends Component {
                     <li>
                         <i className="icon-dengpao"></i>
                         <div>
-                            <div>设计</div>
+                            <div className="title">设计</div>
                             <span>web前端发开工程师</span>
                             <span>C++开发工程师</span>
                         </div>
@@ -33,7 +33,7 @@ class PostClass extends Component {
                     <li>
                         <i className="icon-designsign"></i>
                         <div>
-                            <div>销售</div>
+                            <div className="title">销售</div>
                             <span>web前端发开工程师</span>
                             <span>C++开发工程师</span>
                         </div>
