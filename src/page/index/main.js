@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM, { render } from 'react-dom';
 
 import Header from '../../components/header/header';
-import Footer from '../../components/footer/footer';
+import Booter from '../../components/footer/Booter';
 import Flow from './subpage/flow/Flow';
 import PostClass from './subpage/PostClass/PostClass';
 import DeliveryBtn from './subpage/delivery/deliveryBtn';
@@ -11,17 +11,17 @@ import './stylee.less'
 import "../../common/iconCss/iconfont.css";
 import "../../assets/reset.css";
 
-class HelloWorld extends Component {
+class App extends Component {
     render(){
         return (
             <div className="box">
-                <Header></Header>
+                <Header/>
                 <DeliveryBtn/>
                 <Flow/>
                 <PostClass/>
-                <Footer></Footer>
+                <Booter/>
             </div>
         )
     }
 }
-render(<HelloWorld />, document.getElementById('app'));
+render(<App />, document.getElementById('app'));

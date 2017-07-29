@@ -6,7 +6,7 @@ class PostClass extends Component {
         return (
             <div>
                 <ul className="postClass clearfix iconfont">
-                    <li>
+                    <li className="clearfix">
                         <i className="icon-icon-test"></i>
                         <div>
                             <div className="title">技术</div>

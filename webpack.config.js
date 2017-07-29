@@ -2,7 +2,7 @@ var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-let extract = new ExtractTextPlugin('[name].css');
+
 
 module.exports = {
     entry: {
@@ -29,7 +29,13 @@ module.exports = {
                 exclude: path.resolve(__dirname, 'node_modules')
             },
             {
-                test : /\.(less|css)$/,
+                test : /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    use: 'css-loader'
+                })
+            },
+            {
+                test : /\.less$/,
                 use: ExtractTextPlugin.extract({
                     use: 'css-loader!less-loader'
                 })
@@ -51,7 +57,7 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
-        extract,
+        new ExtractTextPlugin('[name].css'),
         new HtmlWebpackPlugin({
             title: '岗位列表',
             template: './src/list.temp.html',
