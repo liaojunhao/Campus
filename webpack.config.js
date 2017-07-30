@@ -3,12 +3,13 @@ var webpack = require("webpack");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+// 打包公共组件
 
 module.exports = {
     entry: {
         index: path.resolve(__dirname, 'src/page/index/main.js'),
         list: path.resolve(__dirname, 'src/page/list/main.js'),
-        vendor: ['react', 'react-dom']
+        vendor: ['react', 'react-dom','react-router']
     },
     output: {
         path: path.resolve(__dirname, 'build'),

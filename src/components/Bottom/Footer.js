@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './booter.css';
+import './footer.less';
 
-export default class Booter extends Component{
+export default class Footer extends Component{
     constructor(props){
         super();
     }
     render() {
         return (
-            <div id="gogog">
+            <div className="gogog">
                 <h3>我是Footer</h3>
             </div>
         )
