@@ -3,13 +3,49 @@ var webpack = require("webpack");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-// 打包公共组件
+// 打包公共组件的样式
+module.exports = {
+    entry: {
+        ac2: './src/common/css/reset.css',
+        ac3: './src/common/iconCss/iconfont.css'
+    },
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        filename: "[name].css"
+    },
+    module: {
+        loaders: [
+            {
+                test : /\.less$/,
+                use: ExtractTextPlugin.extract({
+                    use: 'css-loader!less-loader'
+                })
+            },
+            {
+                test : /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    use: 'css-loader'
+                })
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10240, // 10KB 以下使用 base64
+                    name: 'images/[name]-[hash:6].[ext]'
+                }
+            }
+        ]
+    },
+    plugins: [
+        new ExtractTextPlugin('[name].css')
+    ]
+}
 
 module.exports = {
     entry: {
         index: path.resolve(__dirname, 'src/page/index/main.js'),
-        list: path.resolve(__dirname, 'src/page/list/main.js'),
-        vendor: ['react', 'react-dom','react-router']
+        list: path.resolve(__dirname, 'src/page/list/main.js')
     },
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -56,8 +92,18 @@ module.exports = {
 
         ]
     },
+    devtool: 'cheap-module-source-map',
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "commons",
+            // (the commons chunk name)
+            filename: "commons.js",
+            // (the filename of the commons chunk)
+            minChunks: 2,
+            // (Modules must be shared between 3 entries)
+            chunks: ["index", "list"],
+            // (Only use these entries)
+        }),
         new ExtractTextPlugin('[name].css'),
         new HtmlWebpackPlugin({
             title: '岗位列表',
