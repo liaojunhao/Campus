@@ -56,7 +56,13 @@ module.exports = {
         port: 8080,
         contentBase: 'build',
         inline: true,
-        hot: true
+        hot: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000',
+                secure: false
+            }
+        }
     },
     module: {
         loaders: [

@@ -3,6 +3,7 @@ import {
     HashRouter as Router,//路由容器 app
     Route,//是单条路由 app.get()
     Link,
+    NavLink,
     Switch
 } from 'react-router-dom';
 
@@ -45,13 +46,13 @@ class RoutMap extends Component {
                                 <div>校园招聘</div>
                             </h1>
                             <li><a href="/index.html">首页</a></li>
-                            <li className="active"><Link to="/">校园职位</Link></li>
-                            <li><Link to="/Ment">招聘流程</Link></li>
-                            <li><Link to="/Datail">走进美联</Link></li>
-                            <li><Link to="/Datail">校园福利</Link></li>
+                            <li><NavLink exact to="/">校园职位</NavLink></li>
+                            <li><NavLink to="/Ment">招聘流程</NavLink></li>
+                            <li><NavLink to="/Datail">走进美联</NavLink></li>
+                            <li><a>校园福利</a></li>
                         </ul>
                     </nav>
-                    <Slider items={IMAGE_DATA} speed={1.2} delay={5} pause={true} autoplay={true} dots={true} arrows={true}/>
+                    <Slider items={IMAGE_DATA} speed={1.2} delay={5} pause={true} autoplay={true} dots={true} arrows={false}/>
                     <div className="container">
                         <Switch>
                             <Route exact path="/" component={Home}/>

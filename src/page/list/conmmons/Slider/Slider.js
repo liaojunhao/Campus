@@ -59,9 +59,7 @@ export default class Slider extends Component {
         let dotsNode = <SliderDots turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
 
         return (
-            <div
-                className="slider"
-                onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
+            <div className="slider" onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
                 <ul style={{
                     left: -100 * this.state.nowLocal + "%",
                     transitionDuration: this.props.speed + "s",
@@ -78,12 +76,12 @@ export default class Slider extends Component {
 
 // getDefaultProps()：设置默认的props，也可以用dufaultProps设置组件的默认属性
 Slider.defaultProps = {
-    speed: 1,
-    delay: 2,
-    pause: true,
-    autoplay: true,
-    dots: true,
-    arrows: true,
-    items: [],
+    speed: 1,  // 切换图片时候的速度
+    delay: 2,  // 图片停留的时间
+    pause: true, // 需要自动轮播的时候，鼠标停留在图片上，是否暂停轮播
+    autoplay: true, // 是否需要自动轮播
+    dots: true, // 是否需要轮播下面的小点
+    arrows: true, // 是否需要轮播的前后箭头
+    items: [], // 轮播的内容
 };
-Slider.autoPlayFlag = null;
+Slider.autoPlayFlag = null; // 加了一个自定义属性，用来存储定时器的返回值
