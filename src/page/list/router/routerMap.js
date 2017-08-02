@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import {
     HashRouter as Router,//路由容器 app
     Route,//是单条路由 app.get()
-    Link,
     NavLink,
     Switch
 } from 'react-router-dom';
 
-import Ment from '../containers/joblist/joblist';
-import NotFound from '../containers/NotFound/404';
+
 import Home from '../containers/Home/home';
+import Ment from '../containers/joblist/joblist';
 import Datail from '../containers/Datail/datail';
+import NotFound from '../containers/NotFound/404';
 
 import Slider from '../conmmons/Slider/Slider';
 
@@ -27,6 +27,24 @@ const IMAGE_DATA = [
         alt: 'images-2',
     }
 ];
+
+// const Ment = (location, cb) => {
+//     require.ensure([], require => {
+//         cb(null, require('../containers/joblist/joblist').default)
+//     },'Ment')
+// }
+//
+// const Datail = (location, cb) => {
+//     require.ensure([], require => {
+//         cb(null, require('../containers/Datail/datail').default)
+//     },'Datail')
+// }
+//
+// const NotFound = (location, cb) => {
+//     require.ensure([], require => {
+//         cb(null, require('../containers/NotFound/404').default)
+//     },'NotFound')
+// }
 
 class RoutMap extends Component {
     constructor(){

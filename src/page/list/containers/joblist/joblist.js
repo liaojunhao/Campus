@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 
+import Title from './subpage/title';
+import CityScreen from './subpage/cityScreen';
+
+import './style.less';
+
 class Ment extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name1: '招聘流程',
+            name2: '宣讲会行程'
+        };
+    }
     render(){
         return (
             <div>
-                <h1>招聘流程</h1>
-                <ul>
-                    <li>工程师</li>
-                    <li>工程师</li>
-                    <li>工程师</li>
-                </ul>
+                <Title name={this.state.name1}/>
+                <div className="flow"></div>
+                <Title name2={this.state.name2}/>
+                <CityScreen/>
             </div>
         )
     }

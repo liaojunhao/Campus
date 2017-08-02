@@ -49,7 +49,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: '[name].js'
+        filename: '[name].js',
+        chunkFilename: '[name].[chunkhash:5].min.js',
     },
     devServer: {
         stats: { colors: true },
