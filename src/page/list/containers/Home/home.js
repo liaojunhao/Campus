@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // 列表页面子组件
 import List from './subpage/List/List';
 import Screen from './subpage/screen';
+import Pagination from './subpage/Pagination';
 
 import './home.less';
 
@@ -24,7 +25,7 @@ class Home extends Component {
                     <div>发布时间</div>
                 </div>
                 <List/>
-                <h2>分页组件</h2>
+                <Pagination/>
             </div>
         )
     }
