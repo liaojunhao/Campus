@@ -1,0 +1,65 @@
+.schoolBox{
+
+  .ShoolList{
+    li{
+      width: 568px;
+      height: 228px;
+      display: inline-block;
+      border:1px solid #e0e0e0;
+      margin-bottom: 20px;
+      .photo{
+        float: left;
+        width: 224px;
+        height: 228px;
+        position: relative;
+        border-right: 1px solid #e0e0e0;
+        &>img{
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          width: 174px;
+          height: 172px;
+        }
+      }
+      .scRight{
+        float: left;
+        margin-left: 20px;
+        color: #858585;
+        a{
+          width: 128px;
+          height: 40px;
+          text-align: center;
+          line-height: 40px;
+          color: #3b3b3b;
+          font-size: 16px;
+          background-color: #ffe100;
+          border-radius: 4px;
+          display: inline-block;
+        }
+        div{
+          font-size: 16px;
+          line-height: 16px;
+          height: 16px;
+          margin-bottom: 20px;
+          span{
+            margin-right: 6px;
+          }
+        }
+        h2{
+          font-weight: normal;
+          font-size: 20px;
+          color: #232323;
+          height: 20px;
+          line-height: 20px;
+          margin: 20px auto;
+        }
+      }
+    }
+    li:nth-of-type(odd){
+      margin-right: 16px;
+    }
+  }
+}

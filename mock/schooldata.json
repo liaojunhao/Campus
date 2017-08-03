@@ -1,0 +1,165 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 111,
+      "title": "中国科学技术大学",
+      "contact": {
+        "name": "陈某某",
+        "phone": "13767557876"
+      },
+      "add": "西区学生活动中心（一楼）报告厅",
+      "City": "深圳",
+      "date": {
+        "yyttdd": "2016-06-08",
+        "timeStart": "12-00",
+        "timeEnd": "21-00"
+      },
+      "imgs": "images/schoolicon.jpg",
+      "Lit": {
+        "lng": 116.403981,
+        "lat": 39.91582
+      }
+    },
+    {
+      "id": 222,
+      "title": "中国科学技术大学",
+      "contact": {
+        "name": "陈某某",
+        "phone": "13767557876"
+      },
+      "add": "西区学生活动中心（一楼）报告厅",
+      "City": "深圳",
+      "date": {
+        "yyttdd": "2016-06-08",
+        "timeStart": "12-00",
+        "timeEnd": "21-00"
+      },
+      "imgs": "images/schoolicon.jpg",
+      "Lit": {
+        "lng": 116.403981,
+        "lat": 39.91582
+      }
+    },
+    {
+      "id": 333,
+      "title": "中国科学技术大学",
+      "contact": {
+        "name": "陈某某",
+        "phone": "13767557876"
+      },
+      "add": "西区学生活动中心（一楼）报告厅",
+      "City": "深圳",
+      "date": {
+        "yyttdd": "2016-06-08",
+        "timeStart": "12-00",
+        "timeEnd": "21-00"
+      },
+      "imgs": "images/schoolicon.jpg",
+      "Lit": {
+        "lng": 116.403981,
+        "lat": 39.91582
+      }
+    },
+    {
+      "id": 444,
+      "title": "中国科学技术大学",
+      "contact": {
+        "name": "陈某某",
+        "phone": "13767557876"
+      },
+      "add": "西区学生活动中心（一楼）报告厅",
+      "City": "深圳",
+      "date": {
+        "yyttdd": "2016-06-08",
+        "timeStart": "12-00",
+        "timeEnd": "21-00"
+      },
+      "imgs": "images/schoolicon.jpg",
+      "Lit": {
+        "lng": 116.403981,
+        "lat": 39.91582
+      }
+    },
+    {
+      "id": 555,
+      "title": "中国科学技术大学",
+      "contact": {
+        "name": "陈某某",
+        "phone": "13767557876"
+      },
+      "add": "西区学生活动中心（一楼）报告厅",
+      "City": "深圳",
+      "date": {
+        "yyttdd": "2016-06-08",
+        "timeStart": "12-00",
+        "timeEnd": "21-00"
+      },
+      "imgs": "images/schoolicon.jpg",
+      "Lit": {
+        "lng": 116.403981,
+        "lat": 39.91582
+      }
+    },
+    {
+      "id": 666,
+      "title": "中国科学技术大学",
+      "contact": {
+        "name": "陈某某",
+        "phone": "13767557876"
+      },
+      "add": "西区学生活动中心（一楼）报告厅",
+      "City": "深圳",
+      "date": {
+        "yyttdd": "2016-06-08",
+        "timeStart": "12-00",
+        "timeEnd": "21-00"
+      },
+      "imgs": "images/schoolicon.jpg",
+      "Lit": {
+        "lng": 116.403981,
+        "lat": 39.91582
+      }
+    },
+    {
+      "id": 777,
+      "title": "中国科学技术大学",
+      "contact": {
+        "name": "陈某某",
+        "phone": "13767557876"
+      },
+      "add": "西区学生活动中心（一楼）报告厅",
+      "City": "深圳",
+      "date": {
+        "yyttdd": "2016-06-08",
+        "timeStart": "12-00",
+        "timeEnd": "21-00"
+      },
+      "imgs": "images/schoolicon.jpg",
+      "Lit": {
+        "lng": 116.403981,
+        "lat": 39.91582
+      }
+    },
+    {
+      "id": 888,
+      "title": "中国科学技术大学",
+      "contact": {
+        "name": "陈某某",
+        "phone": "13767557876"
+      },
+      "add": "西区学生活动中心（一楼）报告厅",
+      "City": "深圳",
+      "date": {
+        "yyttdd": "2016-06-08",
+        "timeStart": "12-00",
+        "timeEnd": "21-00"
+      },
+      "imgs": "images/schoolicon.jpg",
+      "Lit": {
+        "lng": 116.403981,
+        "lat": 39.91582
+      }
+    }
+  ]
+}

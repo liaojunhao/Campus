@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { hashHistory } from 'react-router';
 import {
     HashRouter as Router,//路由容器 app
     Route,//是单条路由 app.get()
     NavLink,
-    Switch
+    Switch,
 } from 'react-router-dom';
 
 
@@ -12,11 +13,11 @@ import Ment from '../containers/joblist/joblist';
 import Datail from '../containers/Datail/datail';
 import NotFound from '../containers/NotFound/404';
 
+import SchoolMap from '../containers/schoolMap';
 import Slider from '../conmmons/Slider/Slider';
 
 // 导航样式
 import './nav.less';
-
 const IMAGE_DATA = [
     {
         src: require('../images/banner1.jpg'),
@@ -28,34 +29,19 @@ const IMAGE_DATA = [
     }
 ];
 
-// const Ment = (location, cb) => {
-//     require.ensure([], require => {
-//         cb(null, require('../containers/joblist/joblist').default)
-//     },'Ment')
-// }
-//
-// const Datail = (location, cb) => {
-//     require.ensure([], require => {
-//         cb(null, require('../containers/Datail/datail').default)
-//     },'Datail')
-// }
-//
-// const NotFound = (location, cb) => {
-//     require.ensure([], require => {
-//         cb(null, require('../containers/NotFound/404').default)
-//     },'NotFound')
-// }
-
 class RoutMap extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             initDone: false
         };
     }
+    // 当用户点击Link的时候，会返回一个location对象
+
     render() {
+        const isModal = true
         return (
-            <Router>
+            <Router history={hashHistory}>
                 <div>
                     <nav className="nav">
                         <ul className="clearfix">
@@ -76,8 +62,10 @@ class RoutMap extends Component {
                             <Route exact path="/" component={Home}/>
                             <Route path="/Ment" component={Ment}/>
                             <Route path="/Datail" component={Datail}/>
-                            <Route component={NotFound}/>
+                            {/* 地图 */}
+                            <Route component={Ment}/>
                         </Switch>
+                        {isModal ? <Route path='/schoolMap/:id' component={SchoolMap} /> : null}
                     </div>
                 </div>
             </Router>

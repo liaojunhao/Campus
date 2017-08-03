@@ -7,7 +7,7 @@ class CityScreen extends Component {
         return (
             <div>
                 <ul className="cityscreen">
-                    <li><a href="">全部</a></li>
+                    <li className="active"><a href="">全部</a></li>
                     <li><a href="">深圳</a></li>
                     <li><a href="">广州</a></li>
                     <li><a href="">北京</a></li>
