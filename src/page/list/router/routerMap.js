@@ -12,6 +12,7 @@ import Home from '../containers/Home/home';
 import Ment from '../containers/joblist/joblist';
 import Datail from '../containers/Datail/datail';
 import NotFound from '../containers/NotFound/404';
+import Welfare from '../containers/Welfare';
 
 import SchoolMap from '../containers/schoolMap';
 import Slider from '../conmmons/Slider/Slider';
@@ -53,7 +54,7 @@ class RoutMap extends Component {
                             <li><NavLink exact to="/">校园职位</NavLink></li>
                             <li><NavLink to="/Ment">招聘流程</NavLink></li>
                             <li><NavLink to="/Datail">走进美联</NavLink></li>
-                            <li><a>校园福利</a></li>
+                            <li><NavLink to="/Welfare">校园福利</NavLink></li>
                         </ul>
                     </nav>
                     <Slider items={IMAGE_DATA} speed={1.2} delay={5} pause={true} autoplay={true} dots={true} arrows={false}/>
@@ -62,6 +63,7 @@ class RoutMap extends Component {
                             <Route exact path="/" component={Home}/>
                             <Route path="/Ment" component={Ment}/>
                             <Route path="/Datail" component={Datail}/>
+                            <Route path="/Welfare" component={Welfare}/>
                             {/* 地图 */}
                             <Route component={Ment}/>
                         </Switch>

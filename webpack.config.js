@@ -60,7 +60,7 @@ module.exports = {
         hot: true,
         proxy: {
             '/api': {
-                target: 'http://localhost:3000',
+                target: 'http://10.1.1.63:469',
                 secure: false
             }
         }
